@@ -37,3 +37,10 @@ button {
   width: 150px;
   border-radius: 9px;
 }
+
+.NewFeaturesModal {
+  border: 5px black solid;
+  float:right;
+  height: 500px;
+  width: 500px;
+}
