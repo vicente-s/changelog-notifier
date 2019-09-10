@@ -9,16 +9,23 @@ class App extends Component {
 
   state = {
     user : {},
-    featuresDisplayed : false
+    featuresDisplaying : false
+  }
+
+  displayFeaturesModal = () => {
+      this.setState(prevState => ({
+        featuresDisplaying : !prevState
+      })
+    )
   }
 
   render() {
     return (
       <div className="App">
         <navbar>
-        <ReleaseNoteButton />
+        <ReleaseNoteButton displayFeatures = {this.displayFeaturesModal}/>
         </navbar>
-        <NewFeaturesModal />
+        <NewFeaturesModal isDisplaying = {this.state.featuresDisplaying} />
       </div>
     );
   }
